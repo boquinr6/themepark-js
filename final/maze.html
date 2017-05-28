@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Maze Game</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/main2.css"/>
+    <link rel="stylesheet" href="css/maze.css"/>
+</head>
+<body>
+    <nav>
+        <div class="navItem navLeft"><a href="index.html">themepark.js</a></div>
+        <div class="navRight">
+            <div class="navItem"><a href="index.html">Map</a></div>
+            <div class="navItem"><a href="#">Log In</a></div>
+        </div>
+    </nav>
+    <section class="title">
+        <p><a href="index.html">themepark.js</a> <i class="fa fa-angle-double-right"></i> <span class="bolder">control flow: crazy maze</span></p>
+        <h1>Control Flow: Crazy Maze</h1>
+    </section>
+    <section class="instructions">
+        <h2>Welcome to the Crazy Maze.js!</h2>
+
+        <p>But for some reason, it looks more like a big field than a crazy maze. All the walls are gone... <br>
+        But with your knowledge of Javascript and for loops and <span class="codetext">Math.random()</span> and conditionals, you can make your own maze! <p>
+
+        <p>You have two different types of walls at your disposable, <span class="codetext">vert</span> and <span class="codetext">horiz</span> (vertical and horizontal). Look at the code to the right to see how to make a code. Then uncomment the lines and press Run Code to see the wall appear.<p>
+
+        <p>Be creative in your maze building, and challenge your friend to complete it! To restart it, refresh the page, and click "Need a hint?" if you get stuck!</p>
+    </section>
+    <section class="instructions hinttext" id="hinttext" style="display: none;">
+        <h2>Hint</h2>
+        <p>Now that you know about for loops, you can make multiple walls at once.<p>
+
+        <div class="codeblock">for (var i = 0; i < 10; i++) {<br>
+        <span class="indent">// insert code here<span><br>
+         <span>}<span></div>
+
+
+        <p>Now that you know about Math.random(), you can randomly put multiple walls around your maze. And since you know about if statements, you can use randomness to decide what type of walls you can make.</p>
+
+        <div class="codeblock">for (var i = 0; i < 10; i++) {<br>
+        <span class="indent">if (Math.random() > .5) {<span><br>
+        <span class="indent2">// insert code here<span><br>
+        <span class="indent">}<span><br>
+        <span class="indent">else {<span><br>
+        <span class="indent2">// insert code here<span><br>
+        <span class="indent">}<span><br>
+        <span>}<span></div>
+        <button id="hidehint">Hide Hint</button>
+    </section>
+    <section class="instructions successtext" id="successtext" style="display: none;">
+        <h2>Success!</h2>
+        <p>Great job getting through the maze!</p>
+        <a href="index.html"><button id="continue">Continue</button></a>
+    </section>
+    <section id="main">
+        <div id="canvasContainer" class="stage" style="position: relative; float: left;">
+            <canvas id="canvas0" width="600" height="450" style="border:1px solid #000000; z-index: 0; position: absolute; left: 0; top: 0;"></canvas>
+            <canvas id="canvas1" width="600" height="450" style="border:1px solid #000000; z-index: 1; position: absolute; left: 0; top: 0;"></canvas>
+            <canvas id="canvas2" width="600" height="450" style="border:1px solid #000000; z-index: 2; position: absolute; left: 0; top: 0;"></canvas>
+        </div>
+        <div class="story">
+            <textarea class="form-control" rows=21 id="text-area">
+// Directions on how to make a wall:
+
+// Add a variable to the game using the game.add.sprite function:
+// var wall = game.add.sprite( /* x position */ , /* y position */, 'vert' or 'horiz');
+
+// Enable physics on the wall:
+//game.physics.p2.enable( wall );
+
+// Finally, turn on "kinematics" on the wall
+//wall.body.kinematic = true;
+            </textarea>
+            <button id="run">Run Code</button>
+            <button id="hint">Need a hint?</button>
+
+        </div>
+    </section>
+    <footer>
+        <div class="copyright">
+            <p>11.127 Project by Group "Something Punny" - Raul Boquin, Michael Choi, Elysa Kohrs, Katy Muhlrad, Yolanda Zhou</p>
+        </div>
+    </footer>
+    
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="js/libs/phaser.js"></script>
+    <script src="js/maze.js"></script>
+</body>
+</html>

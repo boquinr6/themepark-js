@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Roller Coaster Game</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/main.css"/>
+    <link rel="stylesheet" href="static/css/elysa.css"/>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+    <!-- Latest compiled and minified CSS 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">-->
+
+    <!-- Latest compiled and minified JavaScript 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
+
+</head>
+<body>
+    <nav>
+        <div class="navItem navLeft"><a href="index.html">themepark.js</a></div>
+        <div class="navRight">
+            <div class="navItem"><a href="index.html">Map</a></div>
+            <div class="navItem"><a href="#">Log In</a></div>
+        </div>
+    </nav>
+    <section class="title">
+        <p><a href="index.html">themepark.js</a> <i class="fa fa-angle-double-right"></i> <span class="bolder">objects: roller coaster</span></p>
+        <h1>Objects: Fixing A Roller Coaster</h1>
+    </section>
+    <section class="instructions">
+        <p>The park's roller coaster, the Big Dipper, hasn't been attracting many riders. You decide to tackle the task of making the ride more popular.</p>
+        <p>You first decide to add more information to the sign advertising the Big Dipper to attract visitors. There is a variable called <span class="codetext">bigDipper</span>, and you must include at least 3 pieces of information from that object in the sign. Click the "Need a hint?" button if you get stuck!</p>
+    </section>
+    <section class="instructions hinttext">
+        <h2>Hint</h2>
+        <p>Take a look at this line of code:<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="codetext">addLineToSign("Fun " + bigDipper.rideType);</span><br>If this is how you add a line to the sign with the <span class="codetext">rideType</span> property of <span class="codetext">bigDipper</span>, how could you access something else, like <span class="codetext">numLoops</span> or <span class="codetext">speedInMPH</span>?</p>
+        <button id="hidehint">Hide Hint</button>
+    </section>
+    <section class="instructions successtext">
+        <h2>Success!</h2>
+        <p>Great job fixing the sign. The variable <span class="codetext">bigDipper</span> is an <b>object</b> in Javascript, and <span class="codetext">rideType</span>, <span class="codetext">name</span>, and <span class="codetext">minRiderHeight</span> are examples of <b>properties</b> of the object. Like you did to write the sign, properties of objects can be accessed like this:<br><span class="codetext">&nbsp;&nbsp;&nbsp;&nbsp;object[property]</span></p>
+        <button id="continue">Continue</button>
+    </section>
+    <section id="main">
+        <div id="canvasContainer" class="stage" style="position: relative; float: left;">
+            <canvas id="canvas0" width="600" height="450" style="border:1px solid #000000; z-index: 0; position: absolute; left: 0; top: 0;"></canvas>
+            <canvas id="canvas1" width="600" height="450" style="border:1px solid #000000; z-index: 1; position: absolute; left: 0; top: 0;"></canvas>
+            <canvas id="canvas2" width="600" height="450" style="border:1px solid #000000; z-index: 2; position: absolute; left: 0; top: 0;"></canvas>
+        </div>
+        <div class="story">
+            <textarea class="form-control" rows=21 id="text-area">
+// Add at least 3 new pieces of info to the sign to attract visitors
+
+var bigDipper = {
+    rideType: "Roller Coaster",
+    name: "Big Dipper",
+    minRiderHeightInInches: 56,
+    numLoops: 3,
+    speedInMPH: 100,
+    color: "blue",
+    material: "wood"
+};
+
+addLineToSign("Fun " + bigDipper.rideType);
+// add additional lines to the sign here
+
+drawSign();
+            </textarea>
+            <button id="run">Run Code</button>
+            <button id="hint">Need a Hint</button>
+        </div>
+    </section>
+    <footer>
+        <div class="copyright">
+            <p>11.127 Project by Group "Something Punny" - Raul Boquin, Michael Choi, Elysa Kohrs, Katy Muhlrad, Yolanda Zhou</p>
+        </div>
+    </footer>
+    
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <script src="static/js/main.js"></script>
+
+
+    
+
+</body>
+</html>

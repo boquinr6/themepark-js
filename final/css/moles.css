@@ -1,0 +1,44 @@
+.cell {
+  vertical-align: top;
+  display: inline-block;
+  border: 1px solid;
+  margin: 0px;
+}
+
+img {
+  height:100%;
+  width:100%;
+  display:block;
+}
+
+#canvas {
+  width: 600px;
+  height: 450px;
+  border: 1px solid;
+  position: relative;
+  float: left;
+  padding: 0px;
+  left: 0px;
+}
+
+#grid {
+  margin: auto;
+  width: 448px;
+  height: 448px;
+}
+
+#code-frame {
+  width: 600px;
+  height: 450px;
+  font-size: 12px;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+}
+
+.modal {
+  font-family: Helvetica;
+  font-size: 15px;
+}
+
+.code {
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+}

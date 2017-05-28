@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Home</title>
+        <link href="stylesheets/main.css" rel="stylesheet">
+
+        <script src="scripts/jquery-2.1.1.min.js"></script>
+        <script src="scripts/main.js"></script>
+    </head>
+
+    <body>
+
+        <section id="section1">
+            Good morning... er, what's your name again?
+            <br>
+            <div class="code">var name = "<input type="text", name="charName", id="enterCharName">";</div>
+            <br>
+            <input type="button", value="Enter Name", id="submitName">
+            <br>
+            <br>
+        </section>
+
+        <section id="section2">
+            <br>
+            Right! Good morning, <div class="charName" style="display:inline"></div>! Now that you've gotten up, it's time to decide what to wear. If the weather is sunny today, you want to wear your sunglasses. Otherwise, if the weather is rainy today, you want to wear your rain boots. Summarize your decisions below:
+            <br>
+            <div class="code">if (weather.isSunny()) { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<select id="isSunny">
+                    <option value="selectOption">select one</option>
+                    <option value="wearSunglasses()">wearSunglasses()</option>
+                    <option value="wearRainBoots()">wearRainBoots()</option>
+                </select>; <br>
+            } else if (weather.isRainy()) { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<select id="isRainy">
+                    <option value="selectOption">select one</option>
+                    <option value="wearSunglasses()">wearSunglasses()</option>
+                    <option value="wearRainBoots()">wearRainBoots()</option>
+                </select>; <br>
+            }</div> <br>
+            <input type="button", value="Finished", id="submitWeatherConditional">
+            <br>
+            <br>
+        </section>
+
+        <section id="section3">
+            Now let's check the weather by looking outside your window.
+            <input type="button", id="checkWeather", value="Look outside the window.">
+            <br>
+            <div id="weatherText", style="display:inline"></div>
+            <br>
+            <br>
+        </section>
+    </body>
+
+    
+</html>

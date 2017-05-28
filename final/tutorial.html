@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title>Tutorial</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="css/main.css"/>
+    </head>
+
+    <body>
+        <nav>
+            <div class="navItem navLeft"><a href="index.html">themepark.js</a></div>
+            <div class="navRight">
+                <div class="navItem"><a href="index.html">Map</a></div>
+                <div class="navItem"><a href="#">Log In</a></div>
+            </div>
+        </nav>
+        <section class="title">
+            <p><a href="index.html">themepark.js</a> <i class="fa fa-angle-double-right"></i> <span class="bolder">tutorial: variables</span></p>
+            <h1>Tutorial: Variables</h1>
+        </section>
+        <section id="error" class="hidden">
+            <h2>Whoops! You have an error in your submission! </h2>
+            <p id="errormessage"></p>
+        </section>
+        <section id="main">
+            <div class="stage" id="stage"></div>
+            <div class="story">
+
+                <!-- This should be roughly first person. Wake up in bed looking at maybe a window.-->
+
+                <div id="intro">
+                    Good morning... er, what's your name again?
+                    <br>
+                    <div class="codetext">var name = "<input type="text", id="charNameInput" class="codebox">";</div>
+                    <br>
+                    <button id="submitNameButton">Enter Name</button>
+                    <br>
+                    <br>
+                </div>
+
+                <!-- The clothes are laid out on the bed. Probably a generic tshirt to change the color of,
+                     jeans, and a pair of generic sneakers (bonus points for sneakers also changing color). -->
+
+                <div id="varExplanation">
+                    <br>
+                    Right! Good morning, <div id="charName" style="display:inline; float: none;"></div>! What you just did was declaring and assigning a <b>variable</b>. A variable is a container for some value that we can use whenever we want. Variables are declared with the keyword <div class="codetext">var</div>. You can name them whatever you want. Variables are assigned with the equals sign (<div class="codetext">=</div>). Also notice the words and text box that are colored differently. Blue text represents code, and the gray boxes with blue text are areas where you can write code.
+                </div>
+                <button id="nextPage0Button">Next <i class="fa fa-chevron-right"></i></button>
+
+                <div id="getReady">
+                    Now that you've learned how to declare and assign variables, it's time to decide what to wear. Declare a variable, <div class="codetext">shirtColor</div>, and assign it to <div class="codetext">"red"</div>, <div class="codetext">"green"</div>, <div class="codetext">"blue"</div>, or <div class="codetext">"yellow"</div>. As a refresher, this is how to declare and assign a variable: <br>
+                    <br>
+                    <div class="codetext">var variableName = value;</div> <br>
+                    <br>
+                    Remember to end your line with a semicolon (<div class="codetext">;</div>) Try assigning <div class="codetext">shirtColor</div> to different values on different lines to see what happens.
+                    <br>
+                    <textarea rows="4" cols="50" id="shirtColorInput" class="codebox"></textarea>
+                    <br>
+                    <button id="changeShirtColorButton">Execute Code</button>
+                </div>
+                <button id="nextPage1Button">Next <i class="fa fa-chevron-right"></i></button>
+
+                <!-- Have items place on a table, either on individual plates or one big one. Do it so
+                     it's as if you are looking at the top of the table, so most of the screen is taken
+                     up by it. -->
+
+                <div id="eatBreakfast">
+                    Breakfast time! Declare variables representing how much you eat for breakfast below. You can choose from <div class="codetext">toast</div>, <div class="codetext">eggs</div>, <div class="codetext">bacon</div>, and <div class="codetext">waffles</div>. For example,
+                    <br>
+                    <br> <div class="codetext">var toast = 2;</div> <br>
+                    <br>
+                    means you want to eat 2 pieces of toast. Keep in mind you can only stomach up to 5 pieces of each food, and you can't eat negative pieces. Declare and assign each variable on a separate line.
+                    <br>
+                    <textarea rows="8" cols="50" id="breakfastItemsInput" class="codebox">
+// This is a comment. Unlike other lines of code
+// you've written, comments will never be run,
+// so you can write whatever you want in them.
+// Write your breakfast code below</textarea>
+                    <br>
+                    <button id="eatBreakfastButton">Execute Code</button>
+                    <button id="nextPage2Button">Next <i class="fa fa-chevron-right"></i></button>
+                    <br>
+                </div>
+
+                <!-- Same table view as before, but this time display the text somewhere on the screen, with
+                     all the items that were laid out before still there. -->
+
+                <div id="totalBreakfast">
+                    How much did you eat for breakfast? Let's create a new variable, <div class="codetext">total</div>, to represent how much you ate. Make sure you add up all your breakfast variables by finishing the line below.
+                    <br>
+                    <textarea rows="2", cols="50", class="codebox", id="totalBreakfastItemsInput">var total = toast + ;</textarea>
+                    <br>
+                    <button id="totalBreakfastButton">Add 'em Up</button>
+                </div>
+                
+                <button id="nextPage3Button">Next <i class="fa fa-chevron-right"></i></button>
+
+                <!-- This can be the same table, but all the food should be cleared. There should be
+                     one glass of orange juice already on the table. -->
+
+                <div id="drinkOrangeJuice">
+                    Wash down your breakfast with some orange juice. Start with drinking one glass.<br>
+                    <div class="codetext">var orangeJuice = 1;</div>
+                    <br>To drink more, reassign <div class="codetext">orangeJuice</div> by adding to it. For example,
+                    <br> <div class="codetext">orangeJuice = orangeJuice + 1; <br>
+                    </div> means you drink one more glass. You only have enough orange juice left in the fridge to drink 5 total glasses.
+                    <br>
+                    <textarea rows="2", cols="50", class="codebox", id="drinkOrangeJuiceInput"></textarea>
+                    <br>
+                    <button id="drinkOrangeJuiceButton">Drink orange juice</button>
+                </div>
+
+                <button id="nextPage4Button">Next <i class="fa fa-chevron-right"></i></button>
+
+                <!-- Maybe something like a car? -->
+
+                <div id="ending">
+                    Awesome, now you're all set to go to the amusement park!
+                    <br>
+                    <a href="index.html"><button id="finishButton">Finish</button></a>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="copyright">
+                <p>11.127 Project by Group "Something Punny" - Raul Boquin, Michael Choi, Elysa Kohrs, Katy Muhlrad, Yolanda Zhou</p>
+            </div>
+        </footer>
+
+        <script src="js/libs/jquery-2.1.1.min.js"></script>
+        <script src="js/libs/phaser.js"></script>
+        <script src="js/tutorial-main.js"></script>
+        <script src="js/tutorial-story.js"></script>
+    </body>
+</html>

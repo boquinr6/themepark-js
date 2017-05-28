@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Roller Coaster Game</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/main.css"/>
+    <link rel="stylesheet" href="static/css/elysa.css"/>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+</head>
+<body>
+    <nav>
+        <div class="navItem navLeft"><a href="index.html">themepark.js</a></div>
+        <div class="navRight">
+            <div class="navItem"><a href="index.html">Map</a></div>
+            <div class="navItem"><a href="#">Log In</a></div>
+        </div>
+    </nav>
+    <section class="title">
+        <p><a href="index.html">themepark.js</a> <i class="fa fa-angle-double-right"></i> <span class="bolder">objects: roller coaster</span></p>
+        <h1>Objects: Fixing A Roller Coaster</h1>
+    </section>
+    <section class="instructions">
+        <p>The sign didn't help. You heard that visitors are worried about the safety of all the park's rides.</p>
+        <p>You have been told that a roller coaster is safe if:<br>
+            &nbsp;&nbsp;- its minimum rider height is at least 52 inches<br>
+            &nbsp;&nbsp;- it has 3 or fewer loops<br>
+            &nbsp;&nbsp;- its speed is 100 mph or less if it is wooden, or 125 mph or less if it is steel
+        </p>
+        <p>Right now, the Big Dipper is not safe. Create a new variable, <span class="codetext">bigDipper2</span>, which has the same properties as <span class="codetext">bigDipper</span> but satisfies the safety requirements. Run your code when you're ready for the safety test.</p>
+    </section>
+    <section class="instructions hinttext">
+        <h2>Hint</h2>
+        <p>Try creating the <span class="codetext">bigDipper2</span> object below the object <span class="codetext">bigDipper</span>. The construction should look almost the same, you just have to make sure <span class="codetext">bigDipper2</span> satisfies the safety requirements.</p>
+        <button id="hidehint">Hide Hint</button>
+    </section>
+    <section class="instructions successtext">
+        <h2>Success!</h2>
+        <p>Nice work creating a safe roller coaster. <span class="codetext">bigDipper</span> and <span class="codetext">bigDipper2</span> are both objects, which you construct with the syntax:<br><span class="codetext">&nbsp;&nbsp;&nbsp;&nbsp;var object = {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property1: value1,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property2: value2<br>&nbsp;&nbsp;&nbsp;&nbsp;};</p>
+        <button id="continue">Continue</button>
+    </section>
+    <section id="main">
+        <div id="canvasContainer" class="stage" style="position: relative; float: left;">
+            <canvas id="canvas0" width="600" height="450" style="border:1px solid #000000; z-index: 0; position: absolute; left: 0; top: 0;"></canvas>
+            <canvas id="canvas1" width="600" height="450" style="border:1px solid #000000; z-index: 1; position: absolute; left: 0; top: 0;"></canvas>
+            <canvas id="canvas2" width="600" height="450" style="border:1px solid #000000; z-index: 2; position: absolute; left: 0; top: 0;"></canvas>
+        </div>
+        <div class="story">
+            <textarea class="form-control" rows=21 id="text-area">
+/* As a reminder, a roller coaster is safe if:
+     - its minimum rider height is at least 52 inches
+     - it has 3 or less loops
+     - its speed is 100 mph or less if its material is "wood", or 125 mph
+       or less if its material is "steel" */ 
+
+var bigDipper = {
+    rideType: "Roller Coaster",
+    name: "Big Dipper",
+    minRiderHeightInInches: 56,
+    numLoops: 3,
+    speedInMPH: 120,
+    color: "blue",
+    material: "wood"
+};
+
+// create bigDipper2 here
+
+runSafetyCheck(bigDipper);
+runSafetyCheck(bigDipper2);
+            </textarea>
+            <button id="run">Run Code</button>
+            <button id="hint">Need a Hint</button>
+        </div>
+    </section>
+    <footer>
+        <div class="copyright">
+            <p>11.127 Project by Group "Something Punny" - Raul Boquin, Michael Choi, Elysa Kohrs, Katy Muhlrad, Yolanda Zhou</p>
+        </div>
+    </footer>
+    <script src="static/js/main2.js"></script>
+
+</body>
+</html>

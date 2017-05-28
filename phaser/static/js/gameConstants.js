@@ -1,0 +1,2 @@
+var GAME_WIDTH = 600;
+var GAME_HEIGHT = 600;

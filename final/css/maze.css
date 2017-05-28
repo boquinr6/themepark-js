@@ -1,0 +1,22 @@
+section.instructions h2 {
+    font-size:24px;
+    margin-bottom: 8px;
+}
+
+section.instructions p {
+    margin-bottom: 5px;
+}
+
+.codeblock {
+    font-family: "roboto mono",monospace;
+    color: #4183D7;
+    margin-left:25px;
+}
+
+.indent {
+    margin-left:50px;
+}
+
+.indent2 {
+    margin-left:75px;
+}
